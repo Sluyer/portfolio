@@ -1,5 +1,6 @@
 ---
 import projets from "../../data/projets.json";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
   return projets.map((projet) => {
@@ -11,5 +12,7 @@ const { id } = Astro.params;
 const projet = projets.find((p) => p.id === id);
 ---
 
-<h1>{id}</h1>
-<p>{projet.title}</p>
+<Layout title={projet.title}>
+  <h1>{id}</h1>
+  <p>{projet.title}</p>
+</Layout>
