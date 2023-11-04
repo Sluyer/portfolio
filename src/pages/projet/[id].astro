@@ -1,0 +1,15 @@
+---
+import projets from "../../data/projets.json";
+
+export async function getStaticPaths() {
+  return projets.map((projet) => {
+    return { params: { id: projet.id } };
+  });
+}
+
+const { id } = Astro.params;
+const projet = projets.find((p) => p.id === id);
+---
+
+<h1>{id}</h1>
+<p>{projet.title}</p>

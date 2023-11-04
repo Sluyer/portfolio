@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import projets from "../data/projets.json";
+---
+
+<Layout title="SACCO Matteo | Projets">
+  <main>
+    <h1>Mes projets</h1>
+    <ul>
+      {
+        projets.map((projet) => {
+          return (
+            <li>
+              <a href={`/projet/${projet.id}`}>{projet.title}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </main>
+</Layout>
+
+<style></style>
