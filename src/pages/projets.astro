@@ -4,20 +4,19 @@ import projets from "../data/projets.json";
 ---
 
 <Layout title="SACCO Matteo | Projets">
-  <main>
-    <h1>Mes projets</h1>
-    <ul>
-      {
-        projets.map((projet) => {
-          return (
-            <li>
-              <a href={`/projet/${projet.id}`}>{projet.title}</a>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </main>
+  <h1>Mes projets</h1>
+  <ul>
+    <!-- Création du routage dynamique pour chaque projet -->
+    {
+      projets.map((projet) => {
+        return (
+          <li>
+            <a href={`/projet/${projet.id}`}>{projet.title}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
 </Layout>
 
 <style></style>

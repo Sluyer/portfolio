@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
+import Main from "../components/Main.astro";
 interface Props {
   title: string;
   description?: string;
@@ -12,7 +13,7 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html>
+<!-- Création de la forme générale de chaque page en appelant les composants --><!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,6 +26,8 @@ const {
   </head>
   <body class="min-h-screen">
     <Header />
-    <slot />
+    <Main>
+      <slot />
+    </Main>
   </body>
 </html>
