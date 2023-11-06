@@ -5,7 +5,7 @@
         "location": "Mairie Issancourt & Rumel",
         "description": "Une mairie n'ayant pas de site web souhaitait avoir une présence en ligne, j'ai donc effectué un stage dureant ma deuxieme année de BTS SIO au sein de leur administration afin de pourvoir connaître leurs demandes et répondre à leurs besoins",
         "Outils": {"Outil1":"NextJS", "Outil2":"Tailwind CSS"},
-        "Images": {"Image1":"images/next-black.png", "Image2":"images/tailwind-css-black.png"},
+        "Images": {"Image1":"images/next-black.png", "Image2":"images/directus-black.png"},
         "Illustration": "images/portfolio-nextjs.png"
         
     }
@@ -15,8 +15,8 @@
         "title": "Refonte de mon Portfolio",
         "location": "",
         "description": "Mon premier portfolio étant été développé rapidement pour la fin de mon BTS SIO, il me fallait le soigner. J'ai donc opté pour le refaire à neuf en utilisant un nouveau framework",
-        "Outils": {"Outil1":"Astro", "Outil2":"Tailwind CSS"},
-        "Images": {"Image1":"images/astro-black.png", "Image2":"images/tailwind-css-black.png"},
+        "Outils": {"Outil1":"Astro"},
+        "Images": {"Image1":"images/astro-black.png"},
         "Illustration": "images/portfolio-astro.png"
     }
 ]

@@ -6,14 +6,16 @@ import projets from "../data/projets.json";
 <Layout title="SACCO Matteo | Projets">
   <h1 class="text-5xl font-extrabold drop-shadow-lg mb-12">Mes projets</h1>
   <ul class="flex flex-wrap">
-    <!-- Création du routage dynamique pour chaque projet -->
+    <!-- Création du routage dynamique pour chaque projet et utilisation d'opérateurs "ternaire" en cas d'absence de contenu -->
     {
       projets.map((projet) => {
         return (
           <li class="mx-auto my-2 border-2 w-[45%]">
-            <a class="flex flex-wrap" href={`/projet/${projet.id}`}>
-              <img class="drop-shadow-lg mx-auto my-2 w-[25%]" src=`${projet.Images.Image1}` alt=""/>
-              <img class="drop-shadow-lg mx-auto my-2 w-[25%]" src=`${projet.Images.Image2}` alt=""/>
+            <a class="flex flex-col" href={`/projet/${projet.id}`}>
+              <div class="flex flex-row">
+                <img class="drop-shadow-lg mx-auto my-2 w-[25%]" src=`${projet.Images.Image1}` alt=""/> 
+                {projet.Images.Image2 ? <img class="drop-shadow-lg mx-auto my-2 w-[25%]" src=`${projet.Images.Image2}` alt=""/> : '' }
+              </div> 
               <h3 class="text-lg font-extrabold mx-auto">{projet.title} | {projet.Outils.Outil1} {projet.Outils.Outil2 ? ` | ${projet.Outils.Outil2}` : ''} </h3>
             </a>
           </li>

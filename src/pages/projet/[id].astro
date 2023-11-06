@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params; // id utilisé entre autre pour le routage du "slug" de la page dynamique
-const projet = projets.find((p) => p.id === id); // chercher le contenu du json pour le projet en fonction de l'id
+const projet = projets.find((p) => p.id === id); // chercher le contenu du json pour le projet en fonction de l'id, similaire à la recherche de contenu du .map
 ---
 
 <Layout title={projet.title}>
