@@ -1,6 +1,7 @@
 ---
 import projets from "../../data/projets.json";
 import Layout from "../../layouts/Layout.astro";
+import Tag from "../../components/Tag.astro";
 
 export async function getStaticPaths() {
   return projets.map((projet) => {
@@ -13,6 +14,75 @@ const projet = projets.find((p) => p.id === id); // chercher le contenu du json 
 ---
 
 <Layout title={projet.title}>
-  <h1>{id}</h1>
-  <p>{projet.title}</p>
+  <!-- légère variation du css si le lieu est précisé -->
+  {
+    projet.location ? (
+      <>
+        <h1 class="text-5xl font-extrabold drop-shadow-lg mb-2">
+          {projet.title}
+        </h1>
+        <p class="text-lg font-bold mb-8">{projet.location}</p>
+      </>
+    ) : (
+      <h1 class="text-5xl font-extrabold drop-shadow-lg mb-10">
+        {projet.title}
+      </h1>
+    )
+  }
+
+  <!-- contenu de la page projet/id -->
+  <div class="flex flex-col">
+    <!-- div Tags (logo et nom) minimum 1 outil, maximum 3 (je pourrai par la suite utiliser une liste dynamique pour trouver le nombre d'outils utilisés et en faire le maximum) -->
+    <div class="flex flex-row">
+      <Tag href={projet.href.href1}>
+        <img
+          class="w-6 mx-0.5"
+          src=`../../public/${projet.Images.Image1}`
+          alt=""
+        />
+        {projet.Outils.Outil1}
+      </Tag>
+      {
+        projet.Outils.Outil2 ? (
+          <Tag href={projet.href.href2}>
+            <img
+          class="w-6 mx-0.5"
+          src=`../../public/${projet.Images.Image2}`
+          alt=""
+        />
+          {projet.Outils.Outil2}
+            </Tag>
+        ) : (
+          ""
+        )
+      }
+      {
+        projet.Outils.Outil3 ? (
+          <Tag href={projet.href.href3}>
+            <img
+          class="w-6 mx-0.5"
+          src=`../../public/${projet.Images.Image3}`
+          alt=""
+        />
+          {projet.Outils.Outil3}
+            </Tag>
+        ) : (
+          ""
+        )
+      }
+    </div>
+
+    <div class="flex flex-row">
+      <img
+        class="mx-auto mt-4 drop-shadow-xl"
+        src={projet.Illustration}
+        alt=""
+        width={1522 / 1.5}
+      />
+    </div>
+
+    <div class="flex flex-row mt-6 text-2xl">
+      {projet.description}
+    </div>
+  </div>
 </Layout>
