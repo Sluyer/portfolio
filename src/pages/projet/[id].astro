@@ -37,7 +37,7 @@ const projet = projets.find((p) => p.id === id); // chercher le contenu du json 
       <Tag href={projet.href.href1}>
         <img
           class="w-6 mx-0.5"
-          src=`../../public/${projet.Images.Image1}`
+          src=`../../${projet.Images.Image1}`
           alt=""
         />
         {projet.Outils.Outil1}
@@ -47,7 +47,7 @@ const projet = projets.find((p) => p.id === id); // chercher le contenu du json 
           <Tag href={projet.href.href2}>
             <img
           class="w-6 mx-0.5"
-          src=`../../public/${projet.Images.Image2}`
+          src=`../../${projet.Images.Image2}`
           alt=""
         />
           {projet.Outils.Outil2}
@@ -61,7 +61,7 @@ const projet = projets.find((p) => p.id === id); // chercher le contenu du json 
           <Tag href={projet.href.href3}>
             <img
           class="w-6 mx-0.5"
-          src=`../../public/${projet.Images.Image3}`
+          src=`../../${projet.Images.Image3}`
           alt=""
         />
           {projet.Outils.Outil3}

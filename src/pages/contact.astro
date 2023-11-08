@@ -1,7 +1,61 @@
 ---
+import Tag from "../components/Tag.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="SACCO Matteo | Contact" />
+<Layout title="SACCO Matteo | Contact">
+  <div class="w-max mb-10">
+    <p class="text-5xl font-extrabold">Intéressé(e) ?</p>
+    <p class="text-4xl font-bold">Rentrons en contact...</p>
+  </div>
+  <Tag href="https://www.linkedin.com/in/matteo-sacco-259571251">
+    <img class="w-6 mx-0.5" src="images/linkedin-black.png" alt="" />
+     LinkedIn
+  </Tag>
+  <form class="mt-4" action="">
+    <div class="flex flex-col">
+      <!-- nom et prenom -->
+      <div class="flex flex-row justify-evenly w-[50%]">
+        <div class="flex flex-col">
+          <label for="Nom">Nom</label>
+          <input
+            class="border-2 border-black"
+            type="text"
+            name="Nom"
+            id="Nom"
+            placeholder="Votre Nom"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="Prenom">Prénom</label>
+          <input
+            class="border-2 border-black"
+            type="text"
+            name="Prenom"
+            id="Prenom"
+            placeholder="Votre Prénom"
+          />
+        </div>
+      </div>
+      <!-- objet -->
+      <div class="flex flex-col w-[50%]">
+        <label for="Objet">Objet</label>
+        <input
+          class="border-2 border-black"
+          type="text"
+          name="Objet"
+          id="Objet"
+          placeholder="Objet du message"
+        />
+      </div>
+      <!-- contenu -->
+      <div class="flex flex-col w-[50%]">
+        <label for="Contenu">Contenu</label>
+        <textarea class="border-2 border-black h-40" name="Contenu" id="Contenu"
+        ></textarea>
+      </div>
+    </div>
+  </form>
+</Layout>
 
 <style></style>

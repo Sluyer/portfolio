@@ -7,7 +7,7 @@
         "Outils": {"Outil1":"NextJS", "Outil2":"Directus", "Outil3":"Tailwind CSS"},
         "href": {"href1":"https://nextjs.org/docs", "href2":"https://docs.directus.io/user-guide/overview/data-studio-app.html", "href3":"https://v2.tailwindcss.com/"},
         "Images": {"Image1":"images/next-black.png", "Image2":"images/directus-black.png", "Image3":"images/tailwind-css-black.png"},
-        "Illustration": "../../public/images/illustration-astro.png"
+        "Illustration": "../../images/illustration-astro.png"
         
     }
     ,
@@ -19,6 +19,6 @@
         "Outils": {"Outil1":"Astro", "Outil2":"Tailwind CSS"},
         "href": {"href1":"https://docs.astro.build/fr/getting-started/", "href2":"https://v2.tailwindcss.com/"},
         "Images": {"Image1":"images/astro-black.png", "Image2":"images/tailwind-css-black.png"},
-        "Illustration": "../../public/images/illustration-astro.png"
+        "Illustration": "../../images/illustration-astro.png"
     }
 ]
