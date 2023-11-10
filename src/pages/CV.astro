@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="SACCO Matteo | CV">
-  <div class="flex flex-wrap">
+  <div class="flex flex-wrap w-[80%] mx-auto">
     <header class="flex flex-wrap p-2 w-full">
       <div>
         <p class="font-sans font-bold text-2xl w-max">SACCO Matteo</p>
@@ -21,18 +21,163 @@ import Layout from "../layouts/Layout.astro";
     </header>
     <body class="flex flex-wrap">
       <!-- formations et diplomes + experiences professionnelles -->
-      <div class="bg-red-200 p-2 w-[65%]">
-        <p class="font-sans font-bold text-lg drop-shadow-lg">
+      <div class="p-2 w-[65%]">
+        <p class="font-sans font-bold text-lg drop-shadow-lg mb-2">
           Formations Et Diplômes
         </p>
-        <p>2018 | Key English Test | Pass with Merit</p>
+        <p class="font-sans font-bold text-md mb-1">
+          2018 | <b>Key English Test</b> | Pass with Merit
+        </p>
+        <p class="font-sans font-bold text-md mb-1">
+          2018 | <b>Diplôme National du Brevet</b> | Mention très bien
+        </p>
+        <p class="font-sans font-bold text-md mb-1">
+          2021 | <b>Cambridge English Certificate</b> | Level C1
+        </p>
+        <p class="font-sans font-bold text-md mb-1">
+          2021 | <b>Baccalauréat Général</b> | Section Euro (Anglais)
+          Mathématiques, Numériques et Sciences Informatiques
+        </p>
+        <p class="font-sans font-bold text-md mb-1">
+          2023 | <b>BTS SIO</b> (Service Informatique Aux Organisations) Option
+          SLAM
+        </p>
+        <div class="border-b-2 w-[95%] mx-auto mb-2 mt-4 drop-shadow-lg"></div>
+        <p class="font-sans font-bold text-lg drop-shadow-lg mb-2">
+          Expériences professionnelles
+        </p>
+        <!-- Stage -->
+        <div>
+          <p class="font-sans font-bold text-md mb-1">
+            2018 | Stage d'Observation Professionnelles | 1 Semaine
+          </p>
+          <p class="font-sans font-bold text-md mb-1">
+            Lieu : AMADA Charleville-Mézières
+          </p>
+          <ul class="font-sans font-bold text-md mb-1">
+            <li>- Prise en main de divers logiciels de modélisation</li>
+          </ul>
+        </div>
+        <!-- Stage -->
+        <div class="mt-4">
+          <p class="font-sans font-bold text-md mb-1">
+            2022 | Stage en Entreprise | 5 Semaines
+          </p>
+          <p class="font-sans font-bold text-md mb-1">Lieu : AXESYS Bezannes</p>
+          <ul class="font-sans font-bold text-md mb-1">
+            <li>- Prise en main d'un framework (Tailwind CSS)</li>
+            <li>- Seeding de Base de données</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <p class="font-sans font-bold text-md mb-1">
+            2023 | Stage en Organisation | 5 Semaines
+          </p>
+          <p class="font-sans font-bold text-md mb-1">
+            Lieu : Mairie d'Issancourt & Rumel
+          </p>
+          <ul class="font-sans font-bold text-md mb-1">
+            <li>- Prise en main d'un framework (NextJs)</li>
+            <li>- Création d'un site Web pour la mairie</li>
+          </ul>
+        </div>
       </div>
       <!-- autres -->
-      <div class="bg-red-200 p-2 ml-auto w-[30%]"></div>
+      <div class="bg-blue-200 p-2 ml-auto w-[30%]">
+        <p class="font-sans font-bold text-md mb-12">
+          Détenteur du Permis B Véhicule Personnel
+        </p>
+        <div class="border-b-2 w-[95%] mx-auto mb-2 mt-4 drop-shadow-lg"></div>
+        <p class="font-sans font-bold text-lg drop-shadow-lg mb-2">
+          Développement
+        </p>
+        <p class="font-sans font-bold text-md mb-1">Python ++---</p>
+        <p class="font-sans font-bold text-md mb-1">HTML-CSS +++--</p>
+        <p class="font-sans font-bold text-md mb-1">PHP +++--</p>
+        <p class="font-sans font-bold text-md mb-1">JAVA ++---</p>
+        <p class="font-sans font-bold text-md mb-1">MYSQL +++--</p>
+        <p class="font-sans font-bold text-md mb-1">NodeJS ++++-</p>
+        <div class="border-b-2 w-[95%] mx-auto mb-2 mt-4 drop-shadow-lg"></div>
+        <p class="font-sans font-bold text-lg drop-shadow-lg mb-2">
+          Compétences
+        </p>
+        <p class="font-sans font-bold text-md mb-1">Bilingue (FR/EN)</p>
+        <p class="font-sans font-bold text-md mb-1">Sens de l'Organisation</p>
+        <p class="font-sans font-bold text-md mb-1">Communication</p>
+        <p class="font-sans font-bold text-md mb-1">Travail d'équipe</p>
+        <p class="font-sans font-bold text-md mb-1">Rigueur</p>
+        <div class="border-b-2 w-[95%] mx-auto mb-2 mt-4 drop-shadow-lg"></div>
+        <p class="font-sans font-bold text-lg drop-shadow-lg mb-2">Loisirs</p>
+        <div class="flex flex-wrap mb-2">
+          <img
+            class="ml-2"
+            src="/images/histoire-black.png"
+            alt=""
+            width={512 / 16}
+          />
+          <p class="font-sans font-bold text-md ml-4 mb-1">Histoire</p>
+        </div>
+        <div class="flex flex-wrap mb-2">
+          <img
+            class="ml-2"
+            src="/images/jeux-black.png"
+            alt=""
+            width={512 / 16}
+          />
+          <p class="font-sans font-bold text-md ml-4 mb-1">Jeux vidéos</p>
+        </div>
+        <div class="flex flex-wrap mb-2">
+          <img
+            class="ml-2"
+            src="/images/rouage-black.png"
+            alt=""
+            width={512 / 16}
+          />
+          <p class="font-sans font-bold text-md ml-4 mb-1">Technologies</p>
+        </div>
+      </div>
       <!-- contact -->
-      <div class="bg-blue-200 p-2 w-full"></div>
+      <div class="flex flex-wrap justify-evenly p-2 pb-4 w-full">
+        <div class="flex flex-wrap">
+          <img
+            class="ml-2"
+            src="/images/phone-black.png"
+            alt=""
+            width={512 / 10}
+          />
+          <p class="font-sans font-bold text-xm ml-4">06 09 39 66 18</p>
+        </div>
+        <div class="flex flex-wrap">
+          <img
+            class="ml-2"
+            src="/images/mail-black.png"
+            alt=""
+            width={512 / 10}
+          />
+          <div>
+            <p class="font-sans font-bold text-sm ml-4">
+              sacco.matteo@gmail.com
+            </p>
+            <p class="font-sans font-bold text-sm ml-4">msacco.fr</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <img
+            class="ml-2"
+            src="/images/home-black.png"
+            alt=""
+            width={512 / 10}
+          />
+          <div>
+            <p class="font-sans font-bold text-sm ml-4">
+              27 rue hippolyte Taine
+            </p>
+            <p class="font-sans font-bold text-sm ml-4">Vrigne aux Bois</p>
+          </div>
+        </div>
+      </div>
     </body>
   </div>
-</Layout>
 
-<style></style>
+  <style></style>
+</Layout>
