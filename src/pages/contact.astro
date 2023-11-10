@@ -19,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="flex flex-col">
           <label for="Nom">Nom</label>
           <input
-            class="border-2 border-black"
+            class="border-2 rounded-md border-black"
             type="text"
             name="Nom"
             id="Nom"
@@ -29,7 +29,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="flex flex-col">
           <label for="Prenom">Prénom</label>
           <input
-            class="border-2 border-black"
+            class="border-2 rounded-md border-black"
             type="text"
             name="Prenom"
             id="Prenom"
@@ -41,7 +41,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="flex flex-col w-[50%]">
         <label for="Objet">Objet</label>
         <input
-          class="border-2 border-black"
+          class="border-2 rounded-md border-black"
           type="text"
           name="Objet"
           id="Objet"
@@ -51,8 +51,10 @@ import Layout from "../layouts/Layout.astro";
       <!-- contenu -->
       <div class="flex flex-col w-[50%]">
         <label for="Contenu">Contenu</label>
-        <textarea class="border-2 border-black h-40" name="Contenu" id="Contenu"
-        ></textarea>
+        <textarea
+          class="border-2 rounded-md border-black h-40"
+          name="Contenu"
+          id="Contenu"></textarea>
       </div>
     </div>
   </form>
