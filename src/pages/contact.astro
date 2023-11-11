@@ -15,8 +15,10 @@ import Layout from "../layouts/Layout.astro";
   <form class="mt-4" action="">
     <div class="flex flex-col">
       <!-- nom et prenom -->
-      <div class="flex flex-row justify-evenly w-[50%]">
-        <div class="flex flex-col">
+      <div
+        class="flex flex-row justify-evenly w-[50%] mx-auto gap-4 max-md:mx-auto max-md:gap-2 max-md:w-[80%]"
+      >
+        <div class="flex flex-col max-md:w-[50%]">
           <label for="Nom">Nom</label>
           <input
             class="border-2 rounded-md border-black"
@@ -26,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
             placeholder="Votre Nom"
           />
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col max-md:w-[50%]">
           <label for="Prenom">Prénom</label>
           <input
             class="border-2 rounded-md border-black"
@@ -38,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
       <!-- objet -->
-      <div class="flex flex-col w-[50%]">
+      <div class="flex flex-col w-[80%] mx-auto">
         <label for="Objet">Objet</label>
         <input
           class="border-2 rounded-md border-black"
@@ -49,7 +51,7 @@ import Layout from "../layouts/Layout.astro";
         />
       </div>
       <!-- contenu -->
-      <div class="flex flex-col w-[50%]">
+      <div class="flex flex-col w-[80%] mx-auto">
         <label for="Contenu">Contenu</label>
         <textarea
           class="border-2 rounded-md border-black h-40"
