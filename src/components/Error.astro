@@ -1,0 +1,14 @@
+---
+interface Props {
+  errnum: number;
+}
+
+const { errnum } = Astro.props;
+---
+
+<p
+  class="flex flex-row w-max border-2 border-c-black rounded-3xl mx-2 px-2 hover:bg-gray-100"
+>
+  {errnum}
+</p>
+<slot />
