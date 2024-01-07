@@ -6,8 +6,8 @@
         "description": "Une mairie n'ayant pas de site web souhaitait avoir une présence en ligne, j'ai donc effectué un stage dureant ma deuxieme année de BTS SIO au sein de leur administration afin de pourvoir connaître leurs demandes et répondre à leurs besoins. Directus paraissait utile à ce projet, il fallait que l'administration puisse modifier le contenu du site web sans avoir à changer le code car la mairie n'avait pas de service informatique dédié",
         "Outils": {"Outil1":"NextJS", "Outil2":"Directus", "Outil3":"Tailwind CSS"},
         "href": {"href1":"https://nextjs.org/docs", "href2":"https://docs.directus.io/user-guide/overview/data-studio-app.html", "href3":"https://v2.tailwindcss.com/"},
-        "Images": {"Image1":"/images/next-black.png", "Image2":"/images/directus-black.png", "Image3":"/images/tailwind-css-black.png"},
-        "Illustration": "/images/illustration-mairie1.png"
+        "Images": {"Image1":"/portfolio/images/next-black.png", "Image2":"/portfolio/images/directus-black.png", "Image3":"/portfolio/images/tailwind-css-black.png"},
+        "Illustration": "/portfolio/images/illustration-mairie1.png"
         
     }
     ,
@@ -18,8 +18,8 @@
         "description": "Mon premier portfolio étant été développé rapidement pour la fin de mon BTS SIO, il me fallait le soigner. J'ai donc opté pour le refaire à neuf en utilisant un nouveau framework : Astro",
         "Outils": {"Outil1":"Astro", "Outil2":"Tailwind CSS"},
         "href": {"href1":"https://docs.astro.build/fr/getting-started/", "href2":"https://v2.tailwindcss.com/"},
-        "Images": {"Image1":"/images/astro-black.png", "Image2":"/images/tailwind-css-black.png"},
-        "Illustration": "/images/illustration-old-portfolio1.png"
+        "Images": {"Image1":"/portfolio/images/astro-black.png", "Image2":"/portfolio/images/tailwind-css-black.png"},
+        "Illustration": "/portfolio/images/illustration-old-portfolio1.png"
     }
     ,
     {
@@ -29,8 +29,8 @@
         "description": "Le projet Compétences permet à un enseignant de créer une évaluation avec différents critères, et de noter les élèves concernés. Je me suis servis de directus et React Native, tous deux des outils nouveaux pour ma part",
         "Outils": {"Outil1":"React Native", "Outil2":"Directus"},
         "href": {"href1":"https://reactnative.dev/docs/getting-started", "href2":"https://docs.directus.io/user-guide/overview/data-studio-app.html"},
-        "Images": {"Image1":"/images/react-black.png", "Image2":"/images/directus-black.png"},
-        "Illustration": "/images/illustration-directus.jpg"
+        "Images": {"Image1":"/portfolio/images/react-black.png", "Image2":"/portfolio/images/directus-black.png"},
+        "Illustration": "/portfolio/images/illustration-directus.jpg"
     }
     ,
     {
@@ -40,7 +40,7 @@
         "description": "Création d'une application mobile afin de créer des notes de frais. L'utilisation de dolibarr était imposé, cependant le choix du langage de création de l'application était libre",
         "Outils": {"Outil1":"React Native", "Outil2":"Dolibarr API"},
         "href": {"href1":"https://reactnative.dev/docs/getting-started", "href2":"https://www.dolibarr.org/documentation-home.php?lang=fr&l=fr"},
-        "Images": {"Image1":"/images/react-black.png", "Image2":"/images/dolibar-black.png"},
-        "Illustration": "/images/illustration-dolibarr.jpg"
+        "Images": {"Image1":"/portfolio/images/react-black.png", "Image2":"/portfolio/images/dolibar-black.png"},
+        "Illustration": "/portfolio/images/illustration-dolibarr.jpg"
     }
 ]

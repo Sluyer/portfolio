@@ -1,25 +1,25 @@
 <header
   class="flex justify-between items-center px-24 py-12 max-w-7xl w-full mx-auto border-b-2 drop-shadow-lg sticky max-md:px-8 max-md:py-10 max-md:w-full"
 >
-  <a href="/">
+  <a href={`${import.meta.env.BASE_URL}`}>
     <p class="text-3xl font-sans max-md:text-xl">SACCO Matteo</p>
   </a>
   <ul class="flex gap-x-8 max-md:gap-x-2">
     <li>
-      <a href="/" class="font-sans font-bold text-lg max-md:text-sm"
+      <a href={`${import.meta.env.BASE_URL}`} class="font-sans font-bold text-lg max-md:text-sm"
         >Qui suis-je</a
       >
     </li>
     <li>
-      <a href="/projets" class="font-sans font-bold text-lg max-md:text-sm"
+      <a href={`${import.meta.env.BASE_URL}/projets`} class="font-sans font-bold text-lg max-md:text-sm"
         >Projets</a
       >
     </li>
     <li>
-      <a href="/CV" class="font-sans font-bold text-lg max-md:text-sm">CV</a>
+      <a href={`${import.meta.env.BASE_URL}/CV`} class="font-sans font-bold text-lg max-md:text-sm">CV</a>
     </li>
     <li>
-      <a href="/contact" class="font-sans font-bold text-lg max-md:text-sm"
+      <a href={`${import.meta.env.BASE_URL}/contact`} class="font-sans font-bold text-lg max-md:text-sm"
         >Contact</a
       >
     </li>
