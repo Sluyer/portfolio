@@ -1,0 +1,4 @@
+AuthUserFile /portfolio/admin/.mdp
+AuthName "Accès Restreint"
+AuthType Basic
+require valid-user

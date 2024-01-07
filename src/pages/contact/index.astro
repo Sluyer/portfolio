@@ -1,6 +1,6 @@
 ---
-import Tag from "../components/Tag.astro";
-import Layout from "../layouts/Layout.astro";
+import Tag from "../../components/Tag.astro";
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="SACCO Matteo | Contact">
@@ -9,10 +9,10 @@ import Layout from "../layouts/Layout.astro";
     <p class="text-4xl font-bold">Rentrons en contact...</p>
   </div>
   <Tag href="https://www.linkedin.com/in/matteo-sacco-259571251">
-    <img class="w-6 mx-0.5" src="images/linkedin-black.png" alt="" />
+    <img class="w-6 mx-0.5" src={`${import.meta.env.BASE_URL}/images/linkedin-black.png`} alt="" />
     LinkedIn
   </Tag>
-  <form class="mt-4" action="">
+  <form class="mt-4" action="/portfolio/contact/success" method="GET">
     <div class="flex flex-col">
       <!-- nom et prenom -->
       <div
