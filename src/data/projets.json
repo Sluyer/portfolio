@@ -3,7 +3,7 @@
         "id": "1",
         "title": "Site web de mairie",
         "location": "Mairie Issancourt & Rumel",
-        "description": "Une mairie n'ayant pas de site web souhaitait avoir une présence en ligne, j'ai donc effectué un stage dureant ma deuxieme année de BTS SIO au sein de leur administration afin de pourvoir connaître leurs demandes et répondre à leurs besoins. Directus paraissait utile à ce projet, il fallait que l'administration puisse modifier le contenu du site web sans avoir à changer le code car la mairie n'avait pas de service informatique dédié",
+        "description": "Une mairie n'ayant pas de site web souhaitait avoir une présence en ligne, j'ai donc effectué un stage durant ma deuxième année de BTS SIO au sein de leur administration afin de pourvoir connaître leurs demandes et répondre à leurs besoins. Directus paraissait utile à ce projet, il fallait que l'administration puisse modifier le contenu du site web sans avoir à changer le code car la mairie n'avait pas de service informatique dédié",
         "Outils": {"Outil1":"NextJS", "Outil2":"Directus", "Outil3":"Tailwind CSS"},
         "href": {"href1":"https://nextjs.org/docs", "href2":"https://docs.directus.io/user-guide/overview/data-studio-app.html", "href3":"https://v2.tailwindcss.com/"},
         "Images": {"Image1":"/portfolio/images/next-black.png", "Image2":"/portfolio/images/directus-black.png", "Image3":"/portfolio/images/tailwind-css-black.png"},
