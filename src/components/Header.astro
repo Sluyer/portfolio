@@ -1,0 +1,108 @@
+---
+const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+
+const links = [
+  { href: `${base}`, label: "Accueil" },
+  { href: `${base}/projets`, label: "Projets" },
+  { href: `${base}/contact`, label: "Contact" },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-zinc-800/50 bg-surface-950/80 backdrop-blur-xl">
+  <nav class="flex items-center justify-between px-8 py-5 max-w-6xl mx-auto md:px-12">
+    <a href={base} class="group">
+      <span class="text-xl font-bold tracking-tight text-zinc-100 transition-colors group-hover:text-accent-400">
+        Matteo Sacco
+      </span>
+    </a>
+
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden flex flex-col gap-1.5 p-2 -mr-2"
+      aria-label="Menu"
+    >
+      <span class="block w-6 h-0.5 bg-zinc-300 transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-zinc-300 transition-all duration-300" id="bar2"></span>
+      <span class="block w-6 h-0.5 bg-zinc-300 transition-all duration-300" id="bar3"></span>
+    </button>
+
+    <ul class="hidden md:flex items-center gap-1">
+      {links.map(({ href, label }) => {
+        const isActive = currentPath === href || currentPath === href + "/";
+        return (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                "relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300",
+                isActive
+                  ? "text-accent-400 bg-accent-500/10"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50",
+              ]}
+            >
+              {label}
+              {isActive && (
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-accent-400 rounded-full" />
+              )}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+
+  <div
+    id="mobile-menu"
+    class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out border-t border-zinc-800/0"
+  >
+    <ul class="flex flex-col px-6 py-4 gap-1 bg-surface-950/95 backdrop-blur-xl">
+      {links.map(({ href, label }) => {
+        const isActive = currentPath === href || currentPath === href + "/";
+        return (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                "block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200",
+                isActive
+                  ? "text-accent-400 bg-accent-500/10"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50",
+              ]}
+            >
+              {label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    let open = false;
+
+    btn?.addEventListener('click', () => {
+      open = !open;
+      if (open) {
+        menu?.classList.remove('max-h-0', 'border-zinc-800/0');
+        menu?.classList.add('max-h-96', 'border-zinc-800/50');
+        bar1?.classList.add('rotate-45', 'translate-y-2');
+        bar2?.classList.add('opacity-0');
+        bar3?.classList.add('-rotate-45', '-translate-y-2');
+      } else {
+        menu?.classList.add('max-h-0', 'border-zinc-800/0');
+        menu?.classList.remove('max-h-96', 'border-zinc-800/50');
+        bar1?.classList.remove('rotate-45', 'translate-y-2');
+        bar2?.classList.remove('opacity-0');
+        bar3?.classList.remove('-rotate-45', '-translate-y-2');
+      }
+    });
+  });
+</script>

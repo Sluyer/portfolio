@@ -1,0 +1,18 @@
+---
+interface Props {
+  errnum: number;
+}
+
+const { errnum } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center text-center py-20">
+  <p class="text-8xl font-black text-accent-400/20 mb-4">{errnum}</p>
+  <p class="text-xl font-semibold text-zinc-300 mb-2">
+    Oups, il semblerait qu'une erreur se soit produite.
+  </p>
+  <p class="text-zinc-500">
+    Code erreur : <span class="font-bold text-zinc-400">{errnum}</span>
+  </p>
+  <slot />
+</div>
