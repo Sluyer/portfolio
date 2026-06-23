@@ -9,80 +9,62 @@ export async function getStaticPaths() {
   });
 }
 
-const { id } = Astro.params; // id utilisé entre autre pour le routage du "slug" de la page dynamique
-const projet = projets.find((p) => p.id === id); // chercher le contenu du json pour le projet en fonction de l'id, similaire à la recherche de contenu du .map
+const { id } = Astro.params;
+const projet = projets.find((p) => p.id === id);
 ---
 
 <Layout title={projet.title}>
-  <!-- légère variation du css si le lieu est précisé -->
-  {
-    projet.location ? (
-      <>
-        <h1 class="text-5xl font-extrabold drop-shadow-lg mb-2">
-          {projet.title}
-        </h1>
-        <p class="text-lg font-bold mb-8">{projet.location}</p>
-      </>
-    ) : (
-      <h1 class="text-5xl font-extrabold drop-shadow-lg mb-10">
+  <section class="py-8">
+    <div class="mb-8 opacity-0 animate-fade-in">
+      <a
+        href={`${import.meta.env.BASE_URL}/projets`}
+        class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-accent-400 transition-colors mb-6"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Retour aux projets
+      </a>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold text-zinc-100 mb-2">
         {projet.title}
       </h1>
-    )
-  }
-
-  <!-- contenu de la page projet/id -->
-  <div class="flex flex-col">
-    <!-- div Tags (logo et nom) minimum 1 outil, maximum 3 (je pourrai par la suite utiliser une liste dynamique pour trouver le nombre d'outils utilisés et en faire le maximum) -->
-    <div class="flex flex-row">
-      <Tag href={projet.href.href1}>
-        <img
-          class="w-6 mx-0.5"
-          src=`${projet.Images.Image1}`
-          alt=""
-        />
-        {projet.Outils.Outil1}
-      </Tag>
-      {
-        projet.Outils.Outil2 ? (
-          <Tag href={projet.href.href2}>
-            <img
-          class="w-6 mx-0.5"
-          src=`${projet.Images.Image2}`
-          alt=""
-        />
-          {projet.Outils.Outil2}
-            </Tag>
-        ) : (
-          ""
-        )
-      }
-      {
-        projet.Outils.Outil3 ? (
-          <Tag href={projet.href.href3}>
-            <img
-          class="w-6 mx-0.5"
-          src=`${projet.Images.Image3}`
-          alt=""
-        />
-          {projet.Outils.Outil3}
-            </Tag>
-        ) : (
-          ""
-        )
-      }
+      {projet.location && (
+        <p class="text-lg text-zinc-500">{projet.location}</p>
+      )}
     </div>
 
-    <div class="flex flex-row">
+    <div class="flex flex-wrap gap-2 mb-8 opacity-0 animate-fade-in-delay-1">
+      <Tag href={projet.href.href1}>
+        <img class="w-5 h-5 object-contain invert" src={projet.Images.Image1} alt="" />
+        {projet.Outils.Outil1}
+      </Tag>
+      {projet.Outils.Outil2 && (
+        <Tag href={projet.href.href2}>
+          <img class="w-5 h-5 object-contain invert" src={projet.Images.Image2} alt="" />
+          {projet.Outils.Outil2}
+        </Tag>
+      )}
+      {projet.Outils.Outil3 && (
+        <Tag href={projet.href.href3}>
+          <img class="w-5 h-5 object-contain invert" src={projet.Images.Image3} alt="" />
+          {projet.Outils.Outil3}
+        </Tag>
+      )}
+    </div>
+
+    <div class="rounded-2xl overflow-hidden border border-zinc-800/50 mb-10 opacity-0 animate-fade-in-delay-2">
       <img
-        class="mx-auto mt-4 rounded-md drop-shadow-xl"
+        class="w-full max-h-[500px] object-cover"
         src={projet.Illustration}
-        alt=""
-        width={1522 / 1.5}
+        alt={`Illustration de ${projet.title}`}
       />
     </div>
 
-    <div class="flex flex-row mt-6 text-2xl max-md:text-lg">
-      {projet.description}
+    <div class="opacity-0 animate-fade-in-delay-3">
+      <p class="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl">
+        {projet.description}
+      </p>
     </div>
-  </div>
+  </section>
 </Layout>
